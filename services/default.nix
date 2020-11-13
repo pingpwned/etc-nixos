@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ./postgresql.nix
-    ./tftpd.nix
-    ./printing.nix
-    ./xserver.nix
-    ./openvpn.nix
+ #   ./postgresql.nix
+ #   ./tftpd.nix
+ #   ./printing.nix
+ #   ./xserver.nix
+ #   ./openvpn.nix
   ];
 
 
@@ -15,11 +15,14 @@
     extraConfig = "SystemMaxUsage=500M";
   };
 
+  services.openssh.enable = true;
+  services.openssh.permitRootLogin = "yes";
+
   # Trezor Bridge
-  services.trezord.enable = true;
+  # services.trezord.enable = true;
 
   # Blueman
-  services.blueman.enable = true;
+  # services.blueman.enable = true;
 
   # OpenSSH deamon
   # services.openssh.enable = true;

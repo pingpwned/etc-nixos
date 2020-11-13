@@ -8,19 +8,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./hardware.nix
       ./boot.nix
       ./environment/default.nix
       ./services/default.nix
       ./fonts.nix
-      ./networking.nix
-      ./virtualization.nix 
+      ./networking.nix 
       ./nixpkgs/config.nix
-      ./u2f.nix
     ];
-   
-  # Set your time zone.
-  time.timeZone = "Europe/Prague";
   
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

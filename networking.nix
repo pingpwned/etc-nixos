@@ -1,35 +1,36 @@
-{ config, pkgs, ... }:
-
-{
+{ lib, ... }: {
+  # This file was populated at runtime with the networking
+  # details gathered from the active system.
   networking = {
-    hostName = "lammabuk";
-    networkmanager = {
-      enable = true;
+    hostName = "nixos";
+    firewall.allowPing = true;
+
+    nameservers = [
+      "67.207.67.3"
+      "67.207.67.2"
+    ];
+    defaultGateway = "46.101.128.1";
+    defaultGateway6 = "2a03:b0c0:3:d0::1";
+    dhcpcd.enable = false;
+    usePredictableInterfaceNames = lib.mkForce true;
+    interfaces = {
+      eth0 = {
+        ipv4.addresses = [
+          { address="46.101.184.41"; prefixLength=18; }
+{ address="10.19.0.5"; prefixLength=16; }
+        ];
+        ipv6.addresses = [
+          { address="2a03:b0c0:3:d0::e81:2001"; prefixLength=64; }
+{ address="fe80::6c1b:7bff:fe3e:48db"; prefixLength=64; }
+        ];
+        ipv4.routes = [ { address = "46.101.128.1"; prefixLength = 32; } ];
+        ipv6.routes = [ { address = "2a03:b0c0:3:d0::1"; prefixLength = 32; } ];
+      };
+      
     };
-    nameservers = [ "8.8.8.8" "8.8.4.4" ];
-
-  # Enable NAT for containers
-  nat.enable = false;
-  # nat.internalInterfaces = ["ve-+"];
-  # nat.externalInterface = "wlp2s0";
-  # networkmanager.unmanaged = [ "interface-name:ve-*" ];
-  # Open ports in the firewall.
-  # firewall.allowedTCPPorts = [ ... ];
-  # firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # firewall.enable = false;
-  extraHosts =
-    ''
-      127.0.0.1 local.example.com
-      192.168.1.94 nextcloud.home
-    '';
-
-  # Enable wireless support via wpa_supplicant.
-  # wireless.enable = true;  
-
-  # Configure network proxy if necessary
-  # proxy.default = "http://user:password@proxy:port/";
-  # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   };
+  services.udev.extraRules = ''
+    ATTR{address}=="6e:1b:7b:3e:48:db", NAME="eth0"
+    ATTR{address}=="22:98:87:41:15:ba", NAME="eth1"
+  '';
 }

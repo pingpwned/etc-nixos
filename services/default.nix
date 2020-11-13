@@ -9,14 +9,24 @@
  #   ./openvpn.nix
   ];
 
+  services = {
+   dnsmasq = {
+      enable = true;
+      extraConfig = ''
+        interface=wg0
+      '';
+    };
+    
+    openssh = {
+      enable = true;
+      permitRootLogin = "yes";
+    };
 
-  # Limit journal size
-  services.journald = {
-    extraConfig = "SystemMaxUsage=500M";
+    # Limit journal size
+    journald = {
+      extraConfig = "SystemMaxUsage=500M";
+    };
   };
-
-  services.openssh.enable = true;
-  services.openssh.permitRootLogin = "yes";
 
   # Trezor Bridge
   # services.trezord.enable = true;

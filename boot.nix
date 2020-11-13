@@ -10,4 +10,7 @@
   };
 
   boot.cleanTmpDir = true;
+  
+  boot.kernel.sysctl."net.ipv4.conf.all.forwarding" = 1;
+  boot.kernel.sysctl."net.ipv6.conf.all.forwarding" = 1;
 }

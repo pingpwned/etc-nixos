@@ -18,7 +18,13 @@
       ./nixpkgs/config.nix
       ./u2f.nix
     ];
-   
+    hardware.sane.enable = true;
+    hardware.sane.extraBackends = [ 
+      pkgs.utsushi 
+      #pkgs.epkowa 
+    ];
+    services.udev.packages = [ pkgs.utsushi ];
+    #hardware.sane.extraBackends = [ pkgs.epkowa ];
   # Set your time zone.
   time.timeZone = "Europe/Prague";
   

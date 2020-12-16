@@ -7,6 +7,7 @@
     ./printing.nix
     ./xserver.nix
     ./openvpn.nix
+    ./spotifyd.nix
   ];
 
 
@@ -14,7 +15,7 @@
   services.journald = {
     extraConfig = "SystemMaxUsage=500M";
   };
-
+ 
   # Trezor Bridge
   services.trezord.enable = true;
 

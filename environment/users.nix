@@ -8,7 +8,7 @@
     uid = 1000;
     createHome = true;
     home = "/home/pwnedxyz/";
-    extraGroups = [ "wheel" "networkmanager" "docker"]; # additional groups [ "vboxusers" "docker"];
+    extraGroups = [ "wheel" "networkmanager" "docker" "scanner" "lp" ]; # additional groups [ "vboxusers" "docker"];
   };
 
 }

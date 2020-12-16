@@ -3,8 +3,8 @@
 {
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = [
-      "thunderbird-68.12.0"
-    ];
+    # permittedInsecurePackages = [
+    #   "thunderbird-68.12.0"
+    # ];
   };
 }

@@ -14,4 +14,6 @@
       /etc/u2f_keys
     '';
   };
+
+  programs.ssh.startAgent = true;
 }

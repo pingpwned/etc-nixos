@@ -20,4 +20,15 @@
     # opengl.driSupport32Bit = true;
     # pulseaudio.support32Bit = true;
   };
+
+
+
+
+ boot.kernelModules = [ "kvm-intel" ];
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-compute-runtime
+   ];
+  };
 }

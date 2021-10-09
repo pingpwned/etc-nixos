@@ -14,6 +14,7 @@
          set noautoindent
          set nocindent
          set nosmartindent
+         set nu
          set indentexpr=
          let g:netrw_banner = 0
          let g:netrw_liststyle = 3

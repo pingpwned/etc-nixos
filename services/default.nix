@@ -23,6 +23,14 @@
   services.blueman.enable = true;
 
   # OpenSSH deamon
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
+
+   # Enable cron service
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "* * * * *      root    uptime | awk '{print $2 \" \" $3 \" \" $4 \" \" substr($5, 1, length($5)-1)}' > /tmp/uptime"
+    ];
+  };
 
  }

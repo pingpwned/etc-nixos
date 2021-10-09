@@ -4,7 +4,7 @@
   ## host specific variables
   networking.hostName = "app1.example";
   networking.firewall.allowPing = true;
-  imports = [ 
+  imports = [
     <nixpkgs/nixos/modules/profiles/qemu-guest.nix>
     ./vi.nix
   ];
@@ -44,9 +44,9 @@
   users.extraUsers.root.openssh.authorizedKeys.keys = lib.mkDefault [ "AAAAAAAAAAAAAA==" ];
 
   users.users.root.hashedPassword = "";
-  users.users.dsavinykh = {
+  users.users."username" = {
     isNormalUser = true;
-    openssh.authorizedKeys.keys = [ "AAAA="]; 
+    openssh.authorizedKeys.keys = [ "AAAA="];
   };
 
   # packages relevant for all systems
@@ -56,10 +56,10 @@
     # vim Use custom vim config instead /etc/nixos/vim.nix
     wget
     unzip
-    docker-compose 
-    git 
-    yarn 
-    nodejs-12_x 
+    docker-compose
+    git
+    yarn
+    nodejs-12_x
   ];
 
   # Keeping the journald under 500M
@@ -137,4 +137,3 @@
   #  initialScript = "/home/dev/init-mongo.js";
   };
 }
-

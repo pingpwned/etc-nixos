@@ -21,6 +21,7 @@
   extraHosts =
     ''
       127.0.0.1 local.example.com
+      192.168.1.94 nextcloud.home
     '';
 
   # Enable wireless support via wpa_supplicant.

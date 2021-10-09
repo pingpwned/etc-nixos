@@ -10,7 +10,7 @@
 
     # Enable VirtualBox
     virtualbox.host = {
-      enable = true;
+      enable = false;
       # Enable VirtualBox ExtensionPack (necessary for USB drivers higher than 1.1)
       enableExtensionPack = true;
       # Disable VirtualBox hardening

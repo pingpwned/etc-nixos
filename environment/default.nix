@@ -19,8 +19,14 @@
     chromium #brave #dropbox 
     diceware evince filelight firefox gimp-with-plugins keepassxc killall libreoffice-fresh nextcloud-client #notepadqq
     peek phototonic signal-desktop #slack
-    tdesktop thunderbird thunderbird-68 vlc wine
+    tdesktop thunderbird #thunderbird-68 
+    vlc wine feh 
+    spotify-tui spotifyd
     
+    blender
+    
+    xsane
+    imagemagickBig
     #qemu
     #virt-manager
 
@@ -41,6 +47,7 @@
     # Optional stuff
     # spotify
     # steam
+    wireguard
   ];
 
 }

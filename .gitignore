@@ -1,0 +1,4 @@
+services/openvpn.nix
+services/printing.nix
+hardware-configuration.nix
+*.pass

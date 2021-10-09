@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "lamabuk";
+    hostName = "lammabuk";
     networkmanager = {
       enable = true;
     };
@@ -68,8 +68,7 @@
     # wg-quick.interfaces = {
     #   wg0 = {
     #     address = [ "10.0.0.3/32" ];
-    #     # dns = [ "10.0.0.1" ];
-    #     dns = [ "8.8.8.8" ];
+    #     dns = [ "10.0.0.1" ];
     #     privateKeyFile = "/home/pwnedxyz/wireguard_keys/private-us";
 
     #     peers = [

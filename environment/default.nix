@@ -26,7 +26,7 @@
     #tightvnc
 
     blender
-
+    flameshot
     xsane
     imagemagickBig
     #qemu

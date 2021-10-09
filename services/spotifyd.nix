@@ -18,7 +18,7 @@
         backend = pulseaudio
 
         # If set to true, audio data does NOT get cached.
-		   	no_audio_cache = false
+		   	no_audio_cache = false 
 
 		   	# Volume on startup between 0 and 100
 		   	initial_volume = 90
@@ -33,7 +33,8 @@
         # The displayed device type in Spotify clients.
         # Can be unknown, computer, tablet, smartphone, speaker, tv,
         # avr (Audio/Video Receiver), stb (Set-Top Box), and audiodongle.
-        device_type = avr 
+        device_type = avr
+        #cache_path = ${config.users.users.pwnedxyz.home}/.cache/spotifyd/
     ''; 
   };
 }

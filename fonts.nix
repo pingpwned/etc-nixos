@@ -9,10 +9,11 @@
     dejavu_fonts
 #    fira-code
 #    fira-code-symbols
-  (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     mplus-outline-fonts
     dina-font
     proggyfonts
+    powerline-fonts
   ];
   fonts.fontconfig.defaultFonts.emoji = ["NotoEmoji"];
 }

@@ -24,8 +24,8 @@
         dmenu
         i3status
         i3lock
-       	i3-gaps
-        #i3blocks
+        i3-gaps
+        i3blocks
       ];
     };
 

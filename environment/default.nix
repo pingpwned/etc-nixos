@@ -23,6 +23,8 @@
     vlc wine feh
     spotify-tui spotifyd
 
+    powerline-go
+
     #tightvnc
 
     blender

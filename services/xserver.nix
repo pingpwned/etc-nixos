@@ -4,14 +4,14 @@
  #  Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    layout = "cz,us";
+    layout = "cz,us,ru";
     xkbOptions = "eurosign:e";
-  
+
      desktopManager = {
      #  default = "none";
        xterm.enable = false;
      };
-  
+
     displayManager = {
       defaultSession = "none+i3";
     };
@@ -19,7 +19,7 @@
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
-      
+
       extraPackages = with pkgs; [
         dmenu
         i3status
@@ -28,9 +28,9 @@
         #i3blocks
       ];
     };
-   
+
     #windowManager.i3.package = pkgs.i3-gaps;
- 
+
     libinput.enable = false;
 
     synaptics = {

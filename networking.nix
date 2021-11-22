@@ -14,7 +14,7 @@
     # nat.externalInterface = "wlp2s0";
     # networkmanager.unmanaged = [ "interface-name:ve-*" ];
     # Open ports in the firewall.
-    # firewall.allowedTCPPorts = [ ... ];
+    firewall.allowedTCPPorts = [ 8000 ];
     # firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
     # firewall.enable = false;

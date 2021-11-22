@@ -22,6 +22,8 @@
   # Blueman
   services.blueman.enable = true;
 
+  services.picom.enable = true;
+
   # OpenSSH deamon
   services.openssh.enable = true;
 

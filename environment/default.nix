@@ -13,10 +13,12 @@
   # System-wide packages
   environment.systemPackages = with pkgs; [
     # System utilities
-    ark dmidecode gitAndTools.gitFull gnupg gparted htop ntfs3g usbutils unar unzip wget rxvt-unicode xosview2 xcompmgr nodejs-12_x
+    ark dmidecode gitAndTools.gitFull gnupg gparted htop ntfs3g usbutils unar unzip wget rxvt-unicode xosview2 xcompmgr
+
+    nodejs yarn
 
     # Desktop utilities
-    chromium #brave #dropbox
+    chromium google-chrome #brave #dropbox
     diceware evince filelight gimp-with-plugins keepassxc killall libreoffice-fresh nextcloud-client #notepadqq
     peek phototonic signal-desktop #slack
     tdesktop thunderbird #thunderbird-68
@@ -26,13 +28,14 @@
     powerline-go
 
     #tightvnc
+    powerline-fonts
 
     blender
     flameshot
     xsane
     imagemagickBig
     #qemu
-    #virt-manager
+    virt-manager
 
     # Gnome specifics and utilities
     gnome3.gnome-tweaks

@@ -8,6 +8,8 @@
 
   # As GnuPG is now built without support for a graphical passphrase entry by default 
   programs.gnupg.agent.enable = true;
+  programs.fish.enable = false;
+  programs.dconf.enable = true;
   programs.bash.shellInit = ''
     parse_git_branch () {
       pwd | /usr/bin/grep $ssh_mount_dir &>/dev/null && df -h | /usr/bin/grep $(pwd | /usr/bin/grep $ssh_mount_dir.*[^/]) | awk '{print $1}' 2> /dev/null || echo $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (branch:\1)/')

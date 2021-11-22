@@ -5,18 +5,17 @@
     # Enable DOcker
     docker.enable = true;
 
-    # Ebable libvirt for Qemu
-    # libvirtd.enable = true;
-
     # Enable VirtualBox
     virtualbox.host = {
-      enable = false;
+      enable = false; 
       # Enable VirtualBox ExtensionPack (necessary for USB drivers higher than 1.1)
-      enableExtensionPack = true;
+      enableExtensionPack = false;
       # Disable VirtualBox hardening
       # enableHardening = false;
     };
+
+    libvirtd.enable = true;
   };
 
-  users.extraGroups.vboxusers.members = [ "pingpwned" ];
+  #users.extraGroups.vboxusers.members = [ "pingpwned" ];
 }

@@ -8,6 +8,7 @@
     ./xserver.nix
     ./openvpn.nix
     ./spotifyd.nix
+    ./lemp.nix
   ];
 
 

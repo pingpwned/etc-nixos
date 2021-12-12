@@ -21,7 +21,7 @@
     chromium google-chrome #brave #dropbox
     diceware evince filelight gimp-with-plugins keepassxc killall libreoffice-fresh nextcloud-client #notepadqq
     peek phototonic signal-desktop #slack
-    tdesktop thunderbird #thunderbird-68
+    thunderbird #thunderbird-68
     vlc wine feh
     spotify-tui spotifyd
 

@@ -25,7 +25,7 @@ in
           rewrite ^/[_0-9a-zA-Z-]+(/wp-.*) $1 last;
           rewrite ^/[_0-9a-zA-Z-]+(/.*\.php)$ $1 last;
         }
- 
+
       '';
       locations."~ \.php$".extraConfig = ''
         fastcgi_pass  unix:${config.services.phpfpm.pools.mypool.socket};
@@ -48,7 +48,7 @@ in
 
     };
   };
-  
+
  services.mysql = {
     enable = true;
     package = pkgs.mariadb;
@@ -66,7 +66,7 @@ in
     ];
   };
 
-   systemd.services.setdbpass = {
+/*   systemd.services.setdbpass = {
     description = "MySQL database password setup";
     wants = [ "mysql.service" ];
     wantedBy = [ "multi-user.target" ];
@@ -79,6 +79,7 @@ in
       RemainAfterExit = true;
     };
   };
+  */
 
 
   services.phpfpm.pools.mypool = {

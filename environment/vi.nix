@@ -6,8 +6,8 @@
        # Specifies the vim binary name.
        # E.g. set this to "my-vim" and you need to type "my-vim" to open this vim
        # This allows to have multiple vim packages installed (e.g. with a different set of plugins)
-       name = "vii";
-       vimrcConfig.customRC = ''               
+       name = "vi";
+       vimrcConfig.customRC = ''
          syntax enable
          set backspace=2 " make backspace work like most other programs
          set tabstop=2
@@ -20,12 +20,12 @@
          let g:netrw_liststyle = 3
          let g:netrw_browse_split = 1
          let g:netrw_altv = 5
-         let g:netrw_winsize = 25 
+         let g:netrw_winsize = 25
          augroup ProjectDrawer
            autocmd!
            autocmd VimEnter * :Vexplore
          augroup END
-    
+
        '';
        # Use the default plugin list shipped with nixpkgs
        vimrcConfig.vam.knownPlugins = pkgs.vimPlugins;
@@ -37,6 +37,6 @@
          "ctrlp"
          ]; }
        ];
-    })) 
+    }))
   ];
 }

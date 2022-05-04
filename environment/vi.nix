@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:
+#{ config, pkgs, ... }:
+{vim_configurable, pkgs}:
 
-{
-  environment.systemPackages = with pkgs; [
-    ((vim_configurable.customize {
+#{
+#  environment.systemPackages = with pkgs; [
+    vim_configurable.customize {
        # Specifies the vim binary name.
        # E.g. set this to "my-vim" and you need to type "my-vim" to open this vim
        # This allows to have multiple vim packages installed (e.g. with a different set of plugins)
@@ -37,6 +38,6 @@
          "ctrlp"
          ]; }
        ];
-    }))
-  ];
-}
+    }
+#  ];
+#}

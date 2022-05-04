@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./vi.nix
+    #./vi.nix
     ./programs.nix
     ./interactiveShellInit.nix
     ./sessionVariables.nix
@@ -24,7 +24,7 @@
     thunderbird #thunderbird-68
     vlc wine feh
     spotify-tui spotifyd
-    
+    (pkgs.callPackage ./vi.nix {})
     dunst libnotify
 
     powerline-go
